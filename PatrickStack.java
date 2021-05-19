@@ -30,13 +30,28 @@ public final class PatrickStack {
     stackAsArray.add(inputNumber);
   }
   /**
-  * returns integer.
-  * @return
-  * return integer.
+  * returns shows stack.
   */
+  public void showStack() {
+    System.out.println(this.stackAsArray);
+  }
+  /**
+  * peeks at first element.
+  */
+  public void peek() {
+    int peekElement;
+    peekElement = stackAsArray.get(0);
+    System.out.println(peekElement);
+  }
   // Getter that tells the user the most recent input
-  public Integer getPushedNumber() {
-    Thread thread = Thread.currentThread();
-    return this.stackAsArray.get(stackAsArray.size() - 1);
+  /**
+  * pops the first element.
+  * @return
+  * returns pop.
+  */
+  public Integer pop() {
+    Integer popElement;
+    popElement = stackAsArray.remove(0);
+    return popElement;
   }
 }

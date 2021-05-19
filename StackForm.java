@@ -28,8 +28,10 @@ public final class StackForm {
 
       // Placing the inputted integer on the stack
       stack.push(numberChosen);
-      
+      stack.showStack();
       // Catches and tells the user that an improper input was entered
+      stack.peek();
+      System.out.println(stack.pop());
     } catch (Exception e) {
       System.out.println();
       System.out.println("ERROR: Invalid Input");
