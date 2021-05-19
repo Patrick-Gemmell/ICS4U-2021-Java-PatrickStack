@@ -28,10 +28,7 @@ public final class StackForm {
 
       // Placing the inputted integer on the stack
       stack.push(numberChosen);
-
-      // Verifying the integer you just placed in the stack
-      System.out.println("Pushed to ArrayList: " + stack.getPushedNumber());
-
+      
       // Catches and tells the user that an improper input was entered
     } catch (Exception e) {
       System.out.println();

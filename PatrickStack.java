@@ -9,7 +9,10 @@
 import java.util.ArrayList;  // Import the ArrayList class
 
 public final class PatrickStack {
-    private PatrickStack() {
+  /**
+   * public stack.
+   */
+    public PatrickStack() {
   }
     // Initializing the array list field
   /**
@@ -33,6 +36,7 @@ public final class PatrickStack {
   */
   // Getter that tells the user the most recent input
   public Integer getPushedNumber() {
+    Thread thread = Thread.currentThread();
     return this.stackAsArray.get(stackAsArray.size() - 1);
   }
 }
