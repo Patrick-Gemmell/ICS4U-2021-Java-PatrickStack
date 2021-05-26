@@ -37,11 +37,17 @@ public final class PatrickStack {
   }
   /**
   * peeks at first element.
+  * @return
+  * returns peeked element.
   */
-  public void peek() {
-    int peekElement;
-    peekElement = stackAsArray.get(0);
-    System.out.println(peekElement);
+  public Integer peek() {
+    if (this.stackAsArray.size() <= 0) {
+      throw new ArrayIndexOutOfBoundsException("Error: stack is empty.");
+    } else {
+      int peekElement;
+      peekElement = stackAsArray.get(0);
+      return peekElement;
+    }
   }
   // Getter that tells the user the most recent input
   /**
@@ -50,8 +56,24 @@ public final class PatrickStack {
   * returns pop.
   */
   public Integer pop() {
-    Integer popElement;
-    popElement = stackAsArray.remove(0);
-    return popElement;
+    if (this.stackAsArray.size() <= 0) {
+      throw new ArrayIndexOutOfBoundsException("Error: stack is empty.");
+    } else {
+      Integer popElement;
+      popElement = stackAsArray.remove(0);
+      return popElement;
+    }
+  }
+  /**
+   * This method clears the stack of all values.
+   */
+  public void clear() {
+    if (this.stackAsArray.size() <= 0) {
+      throw null;
+    } else {
+      while (this.stackAsArray.size() > 0) {
+        stackAsArray.remove(this.stackAsArray.size() - 1);
+      }
+    }
   }
 }

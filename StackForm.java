@@ -29,12 +29,19 @@ public final class StackForm {
       // Placing the inputted integer on the stack
       stack.push(numberChosen);
       stack.showStack();
-      // Catches and tells the user that an improper input was entered
-      stack.peek();
-      System.out.println(stack.pop());
+      //stack.peek();
+      System.out.println("The peeked element is: " + stack.peek());
+      System.out.println("The value: " + stack.pop() + " got popped out");
+      System.out.println("Clearing Stack");
+      stack.clear();
+      stack.showStack();
+      // Catches and tells the user that an improper input was entered.
+
+    } catch (ArrayIndexOutOfBoundsException e) {
+      System.out.println("Error: stack is empty");
+
     } catch (Exception e) {
-      System.out.println();
-      System.out.println("ERROR: Invalid Input");
+      System.out.println("Error: Invalid input, not an integer");
     }
   }
 }
